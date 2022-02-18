@@ -7,7 +7,7 @@ const Login = (props) => {
 
     const handleLogin = async (e) => {
         e.preventDefault()
-        const response = await fetch("https://tohid-inotebook.herokuapp.com/api/auth/login", {
+        const response = await fetch("https://inotebook-back.herokuapp.com/api/auth/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
