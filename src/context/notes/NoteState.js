@@ -13,7 +13,6 @@ const NoteState = (props) => {
         //Api call
 
         const response = await fetch(`${host}/api/notes/fetchallnotes`, {
-            mode: 'no-cors',
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +32,6 @@ const NoteState = (props) => {
     const addnote = async (title, description, tag) => {
         // API CALL
         const response = await fetch(`${host}/api/notes/addnote`, {
-            mode: 'no-cors',
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +50,6 @@ const NoteState = (props) => {
 
         //API CALL
         const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
-            mode: 'no-cors',
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -73,7 +70,6 @@ const NoteState = (props) => {
 
         //Api call
         const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
-            mode: 'no-cors',
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

@@ -12,7 +12,6 @@ const SignUp = (props) => {
     const { name, email, password } = credentials;
     e.preventDefault()
     const response = await fetch("https://inotebook-back.herokuapp.com/api/auth/createuser", {
-      mode: 'no-cors',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
