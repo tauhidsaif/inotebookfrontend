@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './CSS/Login.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 const Login = (props) => {
     let Navigate = useNavigate();
     const [credentials, setCredentials] = useState({ email: "", password: "" })
@@ -44,7 +44,7 @@ const Login = (props) => {
 
 
                 <form className='my-3 ' onSubmit={handleLogin} >
-                 
+
                     <div className=" container d-flex justify-content-center align-items-center">
                         <h4>Login to continue.. Your information is safe.</h4>
                     </div>
@@ -59,6 +59,10 @@ const Login = (props) => {
                     </div>
                     <div className="container d-flex justify-content-center align-items-center">
                         <button type="submit" id='loginbtn' className="btn btn-primary ">Login</button>
+                    </div>
+                    <div className="container d-flex flex-column justify-content-center align-items-center ">
+                        <p className='my-2'>If you have not account, <Link to="/signup">SIGN UP</Link></p>
+
                     </div>
                 </form>
             </div>

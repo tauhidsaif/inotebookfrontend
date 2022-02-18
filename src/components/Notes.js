@@ -48,7 +48,7 @@ const Notes = (props) => {
 
     return <div className='row my-3'>
 
-        {/* <Welcome /> */}
+        <Welcome />
         <AddNote showAlert={showAlert} />
 
         <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './CSS/Login.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const SignUp = (props) => {
   let Navigate = useNavigate();
@@ -66,6 +66,10 @@ const SignUp = (props) => {
           </div>
           <div className="container d-flex justify-content-center align-items-center">
             <button type="submit" id='loginbtn' className="btn btn-primary ">Sign Up</button>
+          </div>
+          <div className="container d-flex justify-content-center align-items-center ">
+            <p className='my-2'>If you have account, <Link to="/login">LOGIN</Link></p>
+            
           </div>
         </form>
       </div>
