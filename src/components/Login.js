@@ -9,6 +9,7 @@ const Login = (props) => {
     const handleLogin = async (e) => {
         e.preventDefault()
         const response = await fetch("https://inotebook-back.herokuapp.com/api/auth/login", {
+            mode: "no-cors",
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

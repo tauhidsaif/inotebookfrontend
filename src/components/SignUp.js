@@ -12,6 +12,7 @@ const SignUp = (props) => {
     const { name, email, password } = credentials;
     e.preventDefault()
     const response = await fetch("https://inotebook-back.herokuapp.com/api/auth/createuser", {
+      mode: 'no-cors',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -25,6 +26,8 @@ const SignUp = (props) => {
       // localStorage.setItem('token', json.authToken);
       localStorage.setItem('email', json.email);
       localStorage.setItem('name', json.name);
+      console.log(localStorage.getItem('name'))
+      console.log(json.name)
       Navigate('/login', { replace: true })
       props.showAlert("Your Account created successfully ", 'success')
     } else {
