@@ -47,7 +47,7 @@ const Login = (props) => {
                 <form className='my-3 ' onSubmit={handleLogin} >
 
                     <div className="container flex-column container d-flex justify-content-center align-items-center">
-                        <img style={{height : "70px", width: "70px"}} src={logo} alt="" srcset="" />
+                        <img style={{height : "70px", width: "70px"}} src={logo} alt=""  />
                         <h4>Tohid Saif</h4>
 
                     </div>

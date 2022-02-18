@@ -11,7 +11,7 @@ const SignUp = (props) => {
   const handleSignUp = async (e) => {
     const { name, email, password } = credentials;
     e.preventDefault()
-    const response = await fetch("https://inotebook-back.herokuapp.com/auth/createuser", {
+    const response = await fetch("https://inotebook-back.herokuapp.com/api/auth/createuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ const SignUp = (props) => {
       <div className='container-lg containerSignUpandLogin' >
         <form className='my-3 ' onSubmit={handleSignUp} >
           <div className="container flex-column container d-flex justify-content-center align-items-center">
-            <img style={{ height: "70px", width: "70px" }} src={logo} alt="" srcset="" />
+            <img style={{ height: "70px", width: "70px" }} src={logo} alt=""  />
             <h4>Tohid Saif</h4>
 
           </div>

@@ -41,6 +41,7 @@ function App() {
               <Route exact path="/about" element={<About />} />
               <Route exact path="/signup" element={<SignUp showAlert={showAlert}/>} />
               <Route exact path="/login" element={<Login showAlert={showAlert} />} />
+              <Route exact path="/" element={<Login showAlert={showAlert} />} />
             </Routes>
           </div>
         </Router>
