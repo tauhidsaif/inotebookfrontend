@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './CSS/Login.css'
 import { useNavigate, Link } from 'react-router-dom'
+import logo from '../images/logo.png'
 const Login = (props) => {
     let Navigate = useNavigate();
     const [credentials, setCredentials] = useState({ email: "", password: "" })
@@ -44,6 +45,12 @@ const Login = (props) => {
 
 
                 <form className='my-3 ' onSubmit={handleLogin} >
+
+                    <div className="container flex-column container d-flex justify-content-center align-items-center">
+                        <img style={{height : "70px", width: "70px"}} src={logo} alt="" srcset="" />
+                        <h4>Tohid Saif</h4>
+
+                    </div>
 
                     <div className=" container d-flex justify-content-center align-items-center">
                         <h4>Login to continue.. Your information is safe.</h4>

@@ -47,7 +47,7 @@ const Notes = (props) => {
 
 
     return <div className='row my-3'>
-
+        
         <Welcome />
         <AddNote showAlert={showAlert} />
 

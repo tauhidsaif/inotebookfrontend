@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './CSS/Login.css'
 import { useNavigate, Link } from 'react-router-dom'
+import logo from '../images/logo.png'
+
 
 const SignUp = (props) => {
   let Navigate = useNavigate();
@@ -42,6 +44,12 @@ const SignUp = (props) => {
 
       <div className='container-lg containerSignUpandLogin' >
         <form className='my-3 ' onSubmit={handleSignUp} >
+          <div className="container flex-column container d-flex justify-content-center align-items-center">
+            <img style={{ height: "70px", width: "70px" }} src={logo} alt="" srcset="" />
+            <h4>Tohid Saif</h4>
+
+          </div>
+
           <div className=" container d-flex justify-content-center align-items-center">
             <h4>Create account to Save your Notes on Cloud</h4>
           </div>
@@ -69,7 +77,7 @@ const SignUp = (props) => {
           </div>
           <div className="container d-flex justify-content-center align-items-center ">
             <p className='my-2'>If you have account, <Link to="/login">LOGIN</Link></p>
-            
+
           </div>
         </form>
       </div>
