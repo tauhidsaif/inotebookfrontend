@@ -56,12 +56,13 @@ const Login = (props) => {
 
                     </div>
 
-                    <div className=" container d-flex justify-content-center align-items-center">
+                    <div className=" container d-flex justify-content-center align-items-center flex-column">
                         <h4>Login to continue.. Your information is safe.</h4>
-                    </div>
-                    <div id='loader' style={{display: 'none', height:"30px", width:"30px"}} className="container ">
+                        <div id='loader' style={{display: 'none', height:"30px", width:"30px"}}>
                         <Spinner/>
                     </div>
+                    </div>
+                   
                     <div className="form-group ">
                         <label htmlFor="exampleInputEmail1">Email address</label>
                         <input type="email" className="form-control my-2" id="email" onChange={onChange} value={credentials.email} name='email' required minLength={5} aria-describedby="emailHelp" placeholder="Enter email" />

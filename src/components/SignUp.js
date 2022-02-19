@@ -56,12 +56,13 @@ const SignUp = (props) => {
 
           </div>
 
-          <div className=" container d-flex justify-content-center align-items-center">
+          <div className=" container d-flex justify-content-center align-items-center flex-column">
             <h4>Create account to Save your Notes on Cloud</h4>
-          </div>
-          <div id='loader' style={{ display: 'none', height: "30px", width: "30px" }} className="container ">
+            <div id='loader' style={{ display: 'none', height: "30px", width: "30px" }} >
             <Spinner />
           </div>
+          </div>
+         
 
           <div className="form-group ">
             <label htmlFor="exampleInputEmail1">Name</label>
