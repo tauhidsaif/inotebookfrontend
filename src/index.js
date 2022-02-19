@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+const express = require('express')
 import App from './App';
+const app = express()
 import reportWebVitals from './reportWebVitals';
+const path = require('path')
 
 ReactDOM.render(
   <React.StrictMode>
