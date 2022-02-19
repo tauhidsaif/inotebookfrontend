@@ -12,16 +12,16 @@ ReactDOM.render(
 );
 
 
-if(process.env.NODE_ENV === 'production'){
+// if(process.env.NODE_ENV === 'production'){
 
-  // Step 1:
-  app.use(express.static(path.resolve(__dirname, "./build")));
-  // Step 2:
-  app.get("*", function (req, res) {
-  res.sendFile(path.resolve(__dirname, "./build", "index.html"));
-});
+//   // Step 1:
+//   app.use(express.static(path.resolve(__dirname, "./build")));
+//   // Step 2:
+//   app.get("*", function (req, res) {
+//   res.sendFile(path.resolve(__dirname, "./build", "index.html"));
+// });
 
-}
+// }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
