@@ -13,7 +13,7 @@ ReactDOM.render(
 
 
 
-// Step 1:
+// Step  1:
 app.use(express.static(path.resolve(__dirname, "../build")));
 // Step 2:
 app.get("*", function (req, res) {
