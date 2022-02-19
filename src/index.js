@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-const express = require('express')
 import App from './App';
-const app = express()
 import reportWebVitals from './reportWebVitals';
-const path = require('path')
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,12 +13,12 @@ ReactDOM.render(
 
 
 
-// Step  1:
-app.use(express.static(path.resolve(__dirname, "../build")));
-// Step 2:
-app.get("*", function (req, res) {
-  res.sendFile(path.resolve(__dirname, "../build", "index.html"));
-});
+// // Step  1:
+// app.use(express.static(path.resolve(__dirname, "../build")));
+// // Step 2:
+// app.get("*", function (req, res) {
+//   res.sendFile(path.resolve(__dirname, "../build", "index.html"));
+// });
 
 
 
