@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import './CSS/Login.css'
 import { useNavigate, Link } from 'react-router-dom'
 import logo from '../images/logo.png'
+import Spinner from '../components/Spinner'
+
 const Login = (props) => {
     let Navigate = useNavigate();
     const [credentials, setCredentials] = useState({ email: "", password: "" })
 
     const handleLogin = async (e) => {
         e.preventDefault()
+        document.getElementById('loader').style.display = "block"
         const response = await fetch("https://tohid-backend.herokuapp.com/api/auth/login", {
             method: 'POST',
             headers: {
@@ -27,6 +30,7 @@ const Login = (props) => {
 
 
         } else {
+            document.getElementById('loader').style.display = "none"
             props.showAlert("Invalid email or password", 'danger')
 
         }
@@ -54,6 +58,9 @@ const Login = (props) => {
 
                     <div className=" container d-flex justify-content-center align-items-center">
                         <h4>Login to continue.. Your information is safe.</h4>
+                    </div>
+                    <div id='loader' style={{display: 'none', height:"30px", width:"30px"}} className="container ">
+                        <Spinner/>
                     </div>
                     <div className="form-group ">
                         <label htmlFor="exampleInputEmail1">Email address</label>
